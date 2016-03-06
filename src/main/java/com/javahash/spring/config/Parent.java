@@ -5,6 +5,6 @@ package com.javahash.spring.config;
  */
 public abstract class Parent {
     private String insultOponent(){
-        return "fuck you";
+        return "hello? you wery prety";
     }
 }
