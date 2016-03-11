@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.javahash.web'
+version = '1.0-SNAPSHOT'
+
+description = """Spring4MVCHelloWorld Maven Webapp"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+task xuy{
+doLast{
+ simpleProperty.add('1.5')
+ println "XUY" 
+ }
+}
+
+task HelloWorld{
+dependsOn << xuy
+ doLast{
+ println "Hello to everybady" 
+ println simpleProperty.get()
+ } 
+}
+
+/*repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework', name: 'spring-core', version:'4.0.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version:'4.0.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'4.0.1.RELEASE'
+    compile group: 'cglib', name: 'cglib', version:'2.2.2'
+    compile group: 'jstl', name: 'jstl', version:'1.2'
+    testCompile group: 'junit', name: 'junit', version:'3.8.1'
+   // providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.0.1'
+}
+*/
